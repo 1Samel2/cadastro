@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { Container, Image, LayoutCel, H1, LabelInput, Input, Button } from './styles'
+
+import logoUser from './assets/logoConsult.svg'
+
+import Arrow from './assets/arrow.svg'
+
+import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from './styles'
 
 function App() {
 
@@ -11,7 +16,7 @@ function App() {
 
     <Container>
 
-      <Image />
+      <Image src={logoUser} alt="logo" />
 
       <LayoutCel>
 
@@ -21,13 +26,19 @@ function App() {
 
         <Input placeholder='Rodolfo' />
 
-        <labelInput>Idade</labelInput>
+        <LabelInput>Idade</LabelInput>
 
-        <Input placeholder='Idade'/>
+        <Input placeholder='Idade' />
 
-        <Button type='submit' >Cadastrar</Button>
-
-
+        <Button>Cadastrar<img src={Arrow} alt='arrow' /></Button>
+        
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>
+              {user.name} - {user.age}
+            </li>
+          ))}
+        </ul>
 
       </LayoutCel>
 
