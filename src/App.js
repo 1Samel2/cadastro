@@ -1,49 +1,71 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+
 
 
 import logoUser from './assets/logoConsult.svg'
 
 import Arrow from './assets/arrow.svg'
 
+import Trash from './assets/trash.svg'
+
 import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from './styles'
 
 function App() {
 
 
+  const [users, setUsers] = useState([])
 
-  return (
+  const inputName = useRef()
 
 
-    <Container>
+  const inputAge = useRef()
 
-      <Image src={logoUser} alt="logo" />
+  function addNewUser() {
 
-      <LayoutCel>
+    setUsers([
+      ...users,
+      {
+        id: Math.random(),
+        name: inputName.current.value,
+        age: inputAge.current.value},])}
 
-        <H1>Olá!</H1>
 
-        <LabelInput>Nome</LabelInput>
 
-        <Input placeholder='Rodolfo' />
 
-        <LabelInput>Idade</LabelInput>
+return (
 
-        <Input placeholder='Idade' />
 
-        <Button>Cadastrar<img src={Arrow} alt='arrow' /></Button>
-        
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>
-              {user.name} - {user.age}
-            </li>
-          ))}
-        </ul>
+  <Container>
 
-      </LayoutCel>
+    <Image src={logoUser} alt="logo" />
 
-    </Container>
-  )
+    <LayoutCel>
+
+      <H1>Olá!</H1>
+
+      <LabelInput>Nome</LabelInput>
+
+      <Input ref={inputName} placeholder='Rodolfo' />
+
+      <LabelInput>Idade</LabelInput>
+
+      <Input ref={inputAge} placeholder='Idade' />
+
+      <Button onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
+
+      <ul>
+        {users.map((user) => (
+          <User key={user.id}>
+            <p>{user.name}</p>  <p>{user.age}</p>
+            <button><img src={Trash} alt='lata-de-lixo' /></button>
+          </User>
+        ))}
+      </ul>
+
+    </LayoutCel>
+
+  </Container>
+)
 }
 
 
