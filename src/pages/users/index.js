@@ -1,14 +1,14 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import axios from 'axios';
 
-import logoUser from './assets/logoConsult.svg'
+import logoUser from '../'
 
-import Arrow from './assets/arrow.svg'
+import Arrow from '../../assets/arrow.svg'
 
-import Trash from './assets/trash.svg'
+import Trash from '../../assets/trash.svg'
 
-import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from './styles'
+import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from '../pages/users/styles'
 
 function App() {
 
@@ -26,26 +26,37 @@ function App() {
 
   async function addNewUser() {
 
-    /* const { data: newUser } = await axios.post('http://localhost:3001/users', {
+    const { data: newUser } = await axios.post('http://localhost:3001/users', {
       name: inputName.current.value,
       age: inputAge.current.value,
 
     })
- 
+
     console.log(newUser)
-   
 
-    setUsers([ ...users, newUser ])*/
 
-    const { data: newUsers } = await axios.get('http://localhost:3001/users')
+    setUsers([...users, newUser])
 
-    setUsers(newUsers)
-  
+
+
   }
 
+  useEffect(() => {
+    async function fetchUsers() {
+      const { data: newUsers } = await axios.get('http://localhost:3001/users')
+      setUsers(newUsers)
+      console.log(newUsers)
+    }
+    fetchUsers()
+  }, [])
 
-  function deleteUser(userId) {
+
+  async function deleteUser(userId) {
+
+    await axios.delete(`http://localhost:3001/users${userId}`)	
+
     const newUsers = users.filter(user => user.id !== userId)
+
     setUsers(newUsers)
 
   }
