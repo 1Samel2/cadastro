@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import axios from 'axios';
 
-import logoUser from '../'
+import logoUser from '../assets/page/logoConsult.svg'
 
-import Arrow from '../../assets/arrow.svg'
+import Arrow from '../assets/arrow.svg'
 
-import Trash from '../../assets/trash.svg'
 
-import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from '../pages/users/styles'
+
+import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from './users/styles'
 
 function App() {
 

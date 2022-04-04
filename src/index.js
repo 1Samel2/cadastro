@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Home';
+import Home from './page/Home';
+/* import Users from './page/Home/Users'; */
 import GlobalStyle from './globalStyle';
 
 
