@@ -2,9 +2,9 @@ import React, { useState, useRef} from 'react';
 
 import axios from 'axios';
 
-import logoUser from '../../assets/logoConsult.svg'
+import logoUser from '../assets/logoConsult.svg'
 
- import Arrow from '../../assets/arrow.svg'
+ import Arrow from '../assets/arrow.svg'
 
 
 

@@ -2,9 +2,11 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import axios from 'axios';
 
-import logoUser from '../assets/page/logoConsult.svg'
+import logoUser from '../assets/logoConsult.svg'
 
 import Arrow from '../assets/arrow.svg'
+
+import Trash from '../assets/trash.svg'
 
 
 
@@ -53,7 +55,7 @@ function App() {
 
   async function deleteUser(userId) {
 
-    await axios.delete(`http://localhost:3001/users${userId}`)	
+    await axios.delete(`http://localhost:3001/users${userId}`)
 
     const newUsers = users.filter(user => user.id !== userId)
 
@@ -91,6 +93,7 @@ function App() {
             </User>
           ))}
         </ul>
+
 
       </LayoutCel>
 

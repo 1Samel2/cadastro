@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Background from '../../assets/background-principal.svg'
+import Background from '../assets/background-principal.svg'
 
 
 
