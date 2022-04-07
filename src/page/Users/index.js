@@ -2,17 +2,17 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import axios from 'axios';
 
-import logoUser from '../assets/logoConsult.svg'
+import logoUser from '../../assets/3urs.svg'
 
-import Arrow from '../assets/arrow.svg'
+import Arrow from '../../assets/arrow.svg'
 
-import Trash from '../assets/trash.svg'
+import Trash from '../../assets/trash.svg'
 
 
 
-import { Container, Image, LayoutCel, H1, LabelInput, Input, Button, User } from './users/styles'
+import { Container, Image, LayoutCel, H1, Button, User } from './styles'
 
-function App() {
+function Users() {
 
 
   const [users, setUsers] = useState([])
@@ -32,10 +32,11 @@ function App() {
       name: inputName.current.value,
       age: inputAge.current.value,
 
+      
+
     })
 
-    console.log(newUser)
-
+    
 
     setUsers([...users, newUser])
 
@@ -47,7 +48,7 @@ function App() {
     async function fetchUsers() {
       const { data: newUsers } = await axios.get('http://localhost:3001/users')
       setUsers(newUsers)
-      console.log(newUsers)
+    
     }
     fetchUsers()
   }, [])
@@ -73,17 +74,8 @@ function App() {
 
       <LayoutCel>
 
-        <H1>Olá!</H1>
+        <H1>Usuários</H1>
 
-        <LabelInput>Nome</LabelInput>
-
-        <Input ref={inputName} placeholder='Rodolfo' />
-
-        <LabelInput>Idade</LabelInput>
-
-        <Input type="number" ref={inputAge} placeholder='Idade' />
-
-        <Button onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
 
         <ul>
           {users.map((user) => (
@@ -94,6 +86,8 @@ function App() {
           ))}
         </ul>
 
+        <Button onClick={addNewUser}><img src={Arrow} alt='arrow'/>Voltar</Button>
+
 
       </LayoutCel>
 
@@ -103,4 +97,4 @@ function App() {
 
 
 
-export default App;
+export default Users;

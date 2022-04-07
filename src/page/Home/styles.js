@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Background from '../assets/background-principal.svg'
+import Background from '../../assets/background-principal.svg'
 
 
 
@@ -14,7 +14,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 44px;
 
-    height:100vh;
+    min-height:100vh;
 `;
 
 export const Image = styled.img`
@@ -34,7 +34,7 @@ export const LayoutCel = styled.div`
     background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
     border-radius: 61px 61px 0px 0px;
     
-    height: 100vh;
+    min-height:100vh;
 `;
 
 
