@@ -86,7 +86,8 @@ function Users() {
           ))}
         </ul>
 
-        <Button onClick={addNewUser}><img src={Arrow} alt='arrow'/>Voltar</Button>
+        <Button  to='/' 
+        onClick={addNewUser}><img src={Arrow} alt='arrow'/>Voltar</Button>
 
 
       </LayoutCel>

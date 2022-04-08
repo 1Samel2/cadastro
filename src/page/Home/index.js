@@ -58,7 +58,7 @@ function App() {
 
         <Input type="number" ref={inputAge} placeholder='Idade' />
 
-        <Button onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
+        <Button to='usuario' onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
 
       </LayoutCel>
 

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Link } from 'react-router-dom';
+
 import Background from '../../assets/background-principal.svg'
 
 
@@ -93,7 +95,7 @@ margin-bottom: 34px;
 
 
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 
 background: rgba(0, 0, 0, 0.8);
 border-radius: 14px;
@@ -105,6 +107,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 17px;
 line-height: 28px;
+text-decoration: none;
 
 border: none;
 
