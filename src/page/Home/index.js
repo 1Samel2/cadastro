@@ -1,5 +1,7 @@
 import React, { useState, useRef} from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 
 import logoUser from '../../assets/logoConsult.svg'
@@ -10,10 +12,13 @@ import logoUser from '../../assets/logoConsult.svg'
 
 import { Container, Image, LayoutCel, H1, LabelInput, Input, Button,  } from './styles'
 
-function App() {
+function Home() {
 
+  
 
   const [users, setUsers] = useState([])
+
+  const navigate = useNavigate()
 
   const inputName = useRef()
 
@@ -34,11 +39,12 @@ function App() {
 
     setUsers([...users, newUser])
 
+    navigate('/usuario')
+  
   }
 
 
-
-
+  
   return (
 
 
@@ -58,7 +64,7 @@ function App() {
 
         <Input type="number" ref={inputAge} placeholder='Idade' />
 
-        <Button to='usuario' onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
+        <Button  onClick={addNewUser} >Cadastrar<img src={Arrow} alt='arrow' /></Button>
 
       </LayoutCel>
 
@@ -68,4 +74,4 @@ function App() {
 
 
 
-export default App;
+export default Home;

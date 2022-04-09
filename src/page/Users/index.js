@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import axios from 'axios';
 
 import logoUser from '../../assets/3urs.svg'
@@ -14,6 +16,11 @@ import { Container, Image, LayoutCel, H1, Button, User } from './styles'
 
 function Users() {
 
+  const navigate = useNavigate()
+  function handleClick() {
+    navigate('/home')
+    navigate()
+  }
 
   const [users, setUsers] = useState([])
 
@@ -26,7 +33,7 @@ function Users() {
 
 
 
-  async function addNewUser() {
+   async function addNewUser() {
 
     const { data: newUser } = await axios.post('http://localhost:3001/users', {
       name: inputName.current.value,
@@ -35,11 +42,10 @@ function Users() {
       
 
     })
-
+ 
     
 
     setUsers([...users, newUser])
-
 
 
   }
@@ -65,6 +71,12 @@ function Users() {
   }
 
 
+  function handleClick() {
+    navigate('/')
+    navigate(1)
+  }
+
+
   return (
 
 
@@ -86,8 +98,8 @@ function Users() {
           ))}
         </ul>
 
-        <Button  to='/' 
-        onClick={addNewUser}><img src={Arrow} alt='arrow'/>Voltar</Button>
+        <Button
+        onClick={handleClick}><img src={Arrow} alt='arrow'/>Voltar</Button>
 
 
       </LayoutCel>

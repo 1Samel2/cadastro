@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-import { Link } from 'react-router-dom'
 
 import Background from '../../assets/background-secundario.svg'
 
@@ -17,6 +16,7 @@ export const Container = styled.div`
     gap: 44px;
 
     min-height:100vh;
+    height: 100%;
 `;
 
 export const Image = styled.img`
@@ -38,6 +38,7 @@ export const LayoutCel = styled.div`
     backdrop-filter: blur(45px);
     
     min-height:100vh;
+    height: 100%;
 `;
 
 
@@ -55,7 +56,7 @@ margin-bottom: 80px;
 `;
 
 
-export const Button = styled(Link)`
+export const Button = styled.button`
 
 background: transparent;
 border-radius: 14px;
