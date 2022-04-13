@@ -12,7 +12,9 @@ import Trash from '../../assets/trash.svg'
 
 import H1 from '../../components/Title'
 
-import { Container, Image, LayoutCel, Button, User } from './styles'
+import  LayoutCel  from '../../components/ContainerItens';
+
+import { Container, Image, Button, User } from './styles'
 
 function Users() {
 
@@ -84,7 +86,7 @@ function Users() {
 
       <Image src={logoUser} alt="logo" />
 
-      <LayoutCel>
+      <LayoutCel  isBluer={true} >
 
         <H1>Usuários</H1>
 

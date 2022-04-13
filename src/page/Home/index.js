@@ -10,7 +10,9 @@ import logoUser from '../../assets/logoConsult.svg'
 
 import H1 from '../../components/Title'
 
-import { Container, Image, LayoutCel, LabelInput, Input, Button,  } from './styles'
+import  LayoutCel  from '../../components/ContainerItens';
+
+import { Container, Image, LabelInput, Input, Button,  } from './styles'
 
 function Home() {
 
