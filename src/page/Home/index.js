@@ -8,9 +8,9 @@ import logoUser from '../../assets/logoConsult.svg'
 
  import Arrow from '../../assets/arrow.svg'
 
+import H1 from '../../components/Title'
 
-
-import { Container, Image, LayoutCel, H1, LabelInput, Input, Button,  } from './styles'
+import { Container, Image, LayoutCel, LabelInput, Input, Button,  } from './styles'
 
 function Home() {
 

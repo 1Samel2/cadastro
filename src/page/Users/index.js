@@ -10,9 +10,9 @@ import Arrow from '../../assets/arrow.svg'
 
 import Trash from '../../assets/trash.svg'
 
+import H1 from '../../components/Title'
 
-
-import { Container, Image, LayoutCel, H1, Button, User } from './styles'
+import { Container, Image, LayoutCel, Button, User } from './styles'
 
 function Users() {
 
