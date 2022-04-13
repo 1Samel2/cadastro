@@ -26,49 +26,6 @@ export const Image = styled.img`
 
 `;
 
-export const Button = styled.button`
-
-background: transparent;
-border-radius: 14px;
-margin-top: 80px;
-width: 342px;
-height: 74px;
-color: white;
-font-style: normal;
-font-weight: 700;
-font-size: 17px;
-line-height: 28px;
-text-decoration: none;
-
-border: 1px solid  #FFFFFF;
-
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 120px;
-
-
-gap: 30px;
-
-cursor: pointer;
-
-&:hover {
-  opacity:0.8;
-}
-
-&:active {
-  opacity:0.5;
-}
-
-img {
-  transform: scaleX(-1);
-}
-
-
-
-
-
-`;
 
 export const User = styled.li` 
 

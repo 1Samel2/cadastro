@@ -12,7 +12,9 @@ import H1 from '../../components/Title'
 
 import  LayoutCel  from '../../components/ContainerItens';
 
-import { Container, Image, LabelInput, Input, Button,  } from './styles'
+import Button from '../../components/Button'
+
+import { Container, Image, LabelInput, Input,} from './styles'
 
 function Home() {
 
